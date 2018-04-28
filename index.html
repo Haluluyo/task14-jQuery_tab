@@ -68,6 +68,16 @@
       </ul>
     </div>
   </div>
-  
+  <script>
+    var $li=$('#nav li');
+    $li.on('mouseenter',function(){
+      var $this=$(this)
+      var index=$this.index()
+      var thisId=$('.panel').eq(index).attr("id")
+      console.log(thisId)
+      $('.panel').eq(index).addClass('active')
+                 .siBlings().removeClass('active')
+    })
+  </script>
 </body>
 </html>
